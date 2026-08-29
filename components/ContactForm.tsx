@@ -4,6 +4,10 @@ import { useState } from "react";
 
 type Status = "idle" | "sending" | "ok" | "error";
 
+// Web3Forms access keys are public by design — they're meant to be used from
+// the browser. This is injected at build time from NEXT_PUBLIC_WEB3FORMS_KEY.
+const ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string>("");
@@ -14,33 +18,55 @@ export default function ContactForm() {
     setError("");
 
     const form = e.currentTarget;
-    const data = Object.fromEntries(new FormData(form).entries());
+    const data = Object.fromEntries(new FormData(form).entries()) as Record<string, string>;
+
+    // Honeypot: bots fill this, humans never see it. Pretend it worked.
+    if (data.botcheck) {
+      setStatus("ok");
+      form.reset();
+      return;
+    }
+
+    if (!ACCESS_KEY) {
+      setStatus("error");
+      setError("The form isn't configured yet. Please email us directly.");
+      return;
+    }
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: ACCESS_KEY,
+          subject: `Ripely enquiry from ${data.name || "the website"}`,
+          from_name: "Ripely website",
+          name: data.name,
+          email: data.email,
+          replyto: data.email,
+          company: data.company || "(not given)",
+          message: data.message,
+        }),
       });
-      const json = await res.json();
 
-      if (res.ok && json.ok) {
+      const json = await res.json();
+      if (json.success) {
         setStatus("ok");
         form.reset();
       } else {
         setStatus("error");
-        setError(json.error || "Something went wrong. Try again, or email us directly.");
+        setError("The message couldn't be sent. Please email us directly.");
       }
     } catch {
       setStatus("error");
-      setError("Could not reach the server. Try again in a moment.");
+      setError("Couldn't reach the server. Try again in a moment.");
     }
   }
 
   if (status === "ok") {
     return (
       <div className="form">
-        <p className="form-msg ok">
+        <p className="form-msg ok" role="status">
           Thanks, that&apos;s with us. We&apos;ll get back to you shortly at the address you gave.
         </p>
       </div>
@@ -81,7 +107,7 @@ export default function ContactForm() {
           id="message"
           name="message"
           required
-          placeholder="A line or two about your operation and where the gaps are."
+          placeholder="A line or two about your operation and the tools you already run."
         />
       </div>
 
@@ -89,7 +115,9 @@ export default function ContactForm() {
         <button className="btn btn-primary" type="submit" disabled={status === "sending"}>
           {status === "sending" ? "Sending..." : "Send enquiry"}
         </button>
-        {status === "error" && <span className="form-msg err">{error}</span>}
+        <span className="form-msg err" role="status" aria-live="polite">
+          {status === "error" ? error : ""}
+        </span>
       </div>
     </form>
   );

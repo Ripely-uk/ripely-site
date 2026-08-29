@@ -22,9 +22,19 @@ const mono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ripely — soft-fruit operations, integrated",
+  metadataBase: new URL("https://ripely.uk"),
+  title: "Ripely — farm data, joined up",
   description:
-    "Ripely builds the software that moves labour and fruit around a large berry operation. Starting with picker transport, growing into the data layer that ties your season together.",
+    "Berry growers run on software that doesn't talk to itself. Ripely joins your farm's data — labour, transport, yield, quality — into one place and puts modern AI to work on it, so your team spends its time on the fruit, not the spreadsheets.",
+  openGraph: {
+    title: "Ripely — farm data, joined up",
+    description:
+      "We join up the farm software you already run and put modern AI to work on it, starting with picker transport.",
+    url: "https://ripely.uk",
+    siteName: "Ripely",
+    locale: "en_GB",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

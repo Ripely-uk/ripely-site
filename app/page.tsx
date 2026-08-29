@@ -14,15 +14,16 @@ export default function Home() {
         <section className="hero">
           <div className="wrap hero-grid">
             <div className="hero-copy">
-              <span className="eyebrow">Soft-fruit operations, integrated</span>
+              <span className="eyebrow">Farm data, joined up</span>
               <h1>
-                Get the right pickers to the right rows,{" "}
-                <span className="accent">on the right day.</span>
+                The savings are hiding in the gaps{" "}
+                <span className="accent">between your systems.</span>
               </h1>
               <p className="hero-sub">
-                Ripely builds the software that moves labour and fruit around a large berry
-                operation. We start with picker transport, then grow into the data layer that ties
-                your whole season together.
+                A big berry grower runs on a dozen tools that never speak to each other. Labour in
+                one, transport in another, yield and quality somewhere else again. Ripely joins that
+                data up and puts modern AI to work on it, so your team spends the day on the fruit
+                instead of the spreadsheets.
               </p>
               <div className="hero-cta">
                 <a className="btn btn-primary" href="#contact">
@@ -96,28 +97,31 @@ export default function Home() {
           <div className="wrap">
             <span className="eyebrow">The problem</span>
             <p className="band-lead">
-              A big grower runs on spreadsheets that never meet. Labour, transport, yield and quality
-              each sit in their own corner, and money leaks in the gaps between them.
+              You&apos;ve already paid for the software: a tool for picking, one for payroll, another
+              for haulage. None of them talk, so money leaks in the gaps between them, and someone
+              loses an evening stitching it together by hand.
             </p>
             <div className="stats">
               <div className="stat">
                 <div className="stat-num">~£1m/yr</div>
                 <div className="stat-label">
-                  Estimated saving from smarter picker transport at a single large grower.
+                  What smarter picker transport alone saved one large grower. That is a single
+                  project, not the whole of it.
                 </div>
                 <div className="stat-note">Estimate</div>
               </div>
               <div className="stat">
                 <div className="stat-num">1,500+</div>
                 <div className="stat-label">
-                  Seasonal workers to route to the right field, every day, at peak.
+                  Seasonal workers to place in the right field each day at peak, one of many moving
+                  parts we pull together.
                 </div>
                 <div className="stat-note">At scale</div>
               </div>
               <div className="stat">
                 <div className="stat-num">One season</div>
                 <div className="stat-label">
-                  To prove it on your real rows before you commit to anything.
+                  To prove the saving on your own numbers before you commit to anything.
                 </div>
                 <div className="stat-note">How we start</div>
               </div>
@@ -129,24 +133,33 @@ export default function Home() {
         <section className="paper" id="product">
           <div className="wrap">
             <span className="eyebrow">What we build</span>
-            <h2>Two things, in order. The tool that pays for itself, then the layer underneath.</h2>
+            <h2>Connect the data first. Then put it to work for you.</h2>
             <div className="cards">
               <div className="card">
-                <span className="card-tag">01 — Live now</span>
-                <h3>Picker transport &amp; routing</h3>
+                <span className="card-tag">The core</span>
+                <h3>One integration layer</h3>
                 <p>
-                  Match the crews you have to the fields that are ready, and move them there without
-                  the daily scramble. Fewer empty seats, fewer idle pickers, less fruit left too long
-                  on the cane.
+                  Labour, transport, yield, quality and cost, lifted out of their separate tools and
+                  into one place where the numbers line up. We add one integration at a time,
+                  starting with whatever is costing you most.
                 </p>
               </div>
               <div className="card">
-                <span className="card-tag">02 — Where it grows</span>
-                <h3>The operations data layer</h3>
+                <span className="card-tag">Modern</span>
+                <h3>AI that does the boring bit</h3>
                 <p>
-                  Your labour, transport, yield and quality data pulled into one place, so you can see
-                  the whole season at once and act before a gap costs you. We build it one integration
-                  at a time.
+                  The stitching, chasing and reconciling that eats your team&apos;s week, handled by
+                  agents running in the background. Your people spend their time on the judgement
+                  calls, not on data entry.
+                </p>
+              </div>
+              <div className="card">
+                <span className="card-tag">Live now</span>
+                <h3>Picker transport &amp; routing</h3>
+                <p>
+                  Our first project. Match the crews you have to the fields that are ready, and get
+                  them there without the daily scramble. Fewer empty seats, fewer idle pickers, and
+                  less fruit left too long on the cane. More projects follow.
                 </p>
               </div>
             </div>
@@ -158,19 +171,19 @@ export default function Home() {
           <div className="wrap">
             <span className="eyebrow">How we work</span>
             <p className="approach-lead">
-              We build in the field, <b>not the lab.</b> Ripely is developed alongside one of the
-              UK&apos;s largest berry growers, on real rows and real crews.
+              We build on a working farm, <b>not in a lab.</b> Ripely is developed alongside one of
+              the UK&apos;s largest berry growers.
             </p>
             <div className="points">
               <div className="point">
                 <div className="point-k">Berry-first</div>
                 <h4>We know soft fruit</h4>
-                <p>Built for the way berries are actually grown, picked and moved, down to the punnet.</p>
+                <p>Built around the way berries are grown, picked and moved, down to the punnet.</p>
               </div>
               <div className="point">
                 <div className="point-k">Built with growers</div>
-                <h4>Shipped on real fields</h4>
-                <p>Everything we make earns its place in a working operation before it reaches you.</p>
+                <h4>Earns its place on the farm</h4>
+                <p>Everything we ship has to prove itself in a live operation before it reaches you.</p>
               </div>
               <div className="point">
                 <div className="point-k">Prove it first</div>
@@ -187,7 +200,10 @@ export default function Home() {
             <div className="contact-head">
               <span className="eyebrow">Talk to us</span>
               <h2>Tell us where your season leaks.</h2>
-              <p>Send us a line about your operation and we&apos;ll show you what we&apos;d build first.</p>
+              <p>
+                Send a line about your operation and the tools you already run. We&apos;ll tell you
+                what we&apos;d connect first.
+              </p>
             </div>
             <ContactForm />
           </div>
@@ -202,7 +218,7 @@ export default function Home() {
             </svg>
             <span className="foot-word">Ripely</span>
           </a>
-          <small>&copy; 2026 Ripely. Soft-fruit operations software. Built in the UK.</small>
+          <small>&copy; 2026 Ripely. Farm data integration for soft-fruit growers. Built in the UK.</small>
         </div>
       </footer>
     </>

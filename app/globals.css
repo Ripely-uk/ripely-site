@@ -51,14 +51,14 @@ a { color: inherit; text-decoration: none; }
 
 /* ---------- Logo mark ---------- */
 .mark { display: block; }
-.mark--nav { width: 30px; height: 30px; }
+.mark--nav { width: 38px; height: 38px; }
 .mark--foot { width: 26px; height: 26px; }
 
-.logo-lockup { display: flex; align-items: center; gap: 11px; }
+.logo-lockup { display: flex; align-items: center; gap: 12px; }
 .logo-word {
   font-family: var(--display);
   font-weight: 700;
-  font-size: 22px;
+  font-size: 26px;
   letter-spacing: -0.01em;
   color: var(--white);
 }
@@ -78,11 +78,11 @@ header.scrolled { border-bottom-color: var(--forest-line); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: 88px;
 }
-.nav-links { display: flex; align-items: center; gap: 30px; }
+.nav-links { display: flex; align-items: center; gap: 34px; }
 .nav-links a {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--muted);
   transition: color 0.2s ease;
 }
@@ -113,7 +113,7 @@ header.scrolled { border-bottom-color: var(--forest-line); }
   border-color: var(--forest-line);
 }
 .btn-ghost:hover { border-color: var(--leaf-green); transform: translateY(-1px); }
-.nav .btn { padding: 9px 18px; }
+.nav .btn { font-size: 16px; padding: 12px 22px; }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -130,8 +130,8 @@ header.scrolled { border-bottom-color: var(--forest-line); }
 h1 {
   font-family: var(--display);
   font-weight: 700;
-  font-size: clamp(38px, 5.4vw, 62px);
-  line-height: 1.02;
+  font-size: clamp(36px, 4.6vw, 56px);
+  line-height: 1.04;
   letter-spacing: -0.02em;
   max-width: 15ch;
 }
@@ -227,12 +227,12 @@ h1 .accent {
   max-width: 18ch;
   margin-bottom: 44px;
 }
-.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .card {
   background: var(--white);
   border: 1px solid #E3E8DC;
   border-radius: 18px;
-  padding: 34px 32px;
+  padding: 30px 26px;
 }
 .card-tag {
   font-family: var(--mono);
@@ -244,11 +244,11 @@ h1 .accent {
 .card h3 {
   font-family: var(--display);
   font-weight: 600;
-  font-size: 24px;
+  font-size: 21px;
   letter-spacing: -0.01em;
   margin: 12px 0 12px;
 }
-.card p { font-size: 16px; color: #46584D; }
+.card p { font-size: 15.5px; color: #46584D; line-height: 1.5; }
 
 /* ---------- Approach ---------- */
 .approach { padding: 88px 0; }
