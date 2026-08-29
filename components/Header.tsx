@@ -16,9 +16,7 @@ export default function Header() {
     <header className={scrolled ? "scrolled" : ""}>
       <div className="wrap nav">
         <a className="logo-lockup" href="/" aria-label="Ripely home">
-          <svg className="mark mark--nav">
-            <use href="#ripely-mark" />
-          </svg>
+          <img className="mark mark--nav" src="/ripely-mark.png" alt="" />
           <span className="logo-word">Ripely</span>
         </a>
         <nav className="nav-links">
