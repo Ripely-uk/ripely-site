@@ -26,7 +26,7 @@ export async function POST(req: Request) {
     );
   }
 
-  const key = process.env.WEB3FORMS_KEY || "bac1bd9c-23a6-43d2-b92b-e688803966d9";
+  const key = process.env.WEB3FORMS_KEY;
   if (!key) {
     return NextResponse.json(
       { ok: false, error: "The contact form isn't configured yet." },
