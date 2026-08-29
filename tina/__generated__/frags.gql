@@ -1,0 +1,53 @@
+fragment HomeParts on Home {
+  __typename
+  hero {
+    __typename
+    eyebrow
+    headline
+    headlineAccent
+    sub
+    ctaPrimary
+    ctaSecondary
+  }
+  problem {
+    __typename
+    eyebrow
+    lead
+  }
+  stats {
+    __typename
+    num
+    label
+    note
+  }
+  product {
+    __typename
+    eyebrow
+    heading
+    cards {
+      __typename
+      tag
+      title
+      body
+    }
+  }
+  approach {
+    __typename
+    eyebrow
+    leadStart
+    leadEmphasis
+    leadEnd
+    points {
+      __typename
+      kicker
+      title
+      body
+    }
+  }
+  contact {
+    __typename
+    eyebrow
+    heading
+    sub
+  }
+}

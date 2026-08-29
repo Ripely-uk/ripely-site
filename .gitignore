@@ -33,6 +33,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# tina (generated client + built admin SPA)
-/tina/__generated__
+# tina: commit the generated client/types so every build can import them;
+# ignore only the local cache and the built admin SPA (both regenerated).
+/tina/__generated__/.cache
 /public/admin
