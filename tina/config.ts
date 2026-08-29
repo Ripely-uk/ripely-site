@@ -23,9 +23,10 @@ export default defineConfig({
         path: "content/home",
         format: "json",
         // One fixed document; editors change its text, they don't add/remove it.
+        // No `router` on purpose: with form-based editing, a router bounces the
+        // menu link to the live-preview screen instead of opening the form.
         ui: {
           allowedActions: { create: false, delete: false },
-          router: () => "/",
         },
         fields: [
           {
