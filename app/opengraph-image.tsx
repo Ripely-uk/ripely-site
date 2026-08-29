@@ -1,11 +1,21 @@
 import { ImageResponse } from "next/og";
 import { MARK_DATA_URI } from "./_brand";
+import { BRICOLAGE_BOLD_B64 } from "./_brandFont";
 
 export const alt = "Ripely — farm data, joined up";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
+function fontData(b64: string): ArrayBuffer {
+  const bin = atob(b64);
+  const bytes = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  return bytes.buffer;
+}
+
 export default function Image() {
+  const bricolage = fontData(BRICOLAGE_BOLD_B64);
+
   return new ImageResponse(
     (
       <div
@@ -18,13 +28,13 @@ export default function Image() {
           background: "#0E3A2B",
           color: "#FFFFFF",
           padding: "72px 80px",
-          fontFamily: "sans-serif",
+          fontFamily: "Bricolage",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: "18px" }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img width="66" height="57" src={MARK_DATA_URI} alt="" />
-          <div style={{ fontSize: 40, fontWeight: 700, letterSpacing: "-0.01em" }}>Ripely</div>
+          <div style={{ fontSize: 44, fontWeight: 700, letterSpacing: "-0.02em" }}>Ripely</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div
@@ -41,10 +51,10 @@ export default function Image() {
           <div
             style={{
               display: "flex",
-              fontSize: 64,
+              fontSize: 66,
               fontWeight: 700,
-              lineHeight: 1.08,
-              letterSpacing: "-0.02em",
+              lineHeight: 1.06,
+              letterSpacing: "-0.03em",
               marginTop: 22,
               maxWidth: 1000,
             }}
@@ -55,6 +65,9 @@ export default function Image() {
         <div style={{ display: "flex", fontSize: 26, color: "#A9BFB2" }}>ripely.uk</div>
       </div>
     ),
-    { ...size }
+    {
+      ...size,
+      fonts: [{ name: "Bricolage", data: bricolage, weight: 700, style: "normal" }],
+    }
   );
 }
