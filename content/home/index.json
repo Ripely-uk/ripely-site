@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "eyebrow": "Farm data, joined up",
+    "headline": "The savings are hiding in the gaps",
+    "headlineAccent": "between your systems.",
+    "sub": "A big berry grower runs on a dozen tools that never speak to each other. Labour in one, transport in another, yield and quality somewhere else again. Ripely joins that data up and puts modern AI to work on it, so your team spends the day on the fruit instead of the spreadsheets.",
+    "ctaPrimary": "Book a call",
+    "ctaSecondary": "See what we build"
+  },
+  "problem": {
+    "eyebrow": "The problem",
+    "lead": "You've already paid for the software: a tool for picking, one for payroll, another for haulage. None of them talk, so money leaks in the gaps between them, and someone loses an evening stitching it together by hand."
+  },
+  "stats": [
+    {
+      "num": "~£1m/yr",
+      "label": "What smarter picker transport alone saved one large grower. That is a single project, not the whole of it.",
+      "note": "Estimate"
+    },
+    {
+      "num": "1,500+",
+      "label": "Seasonal workers to place in the right field each day at peak, one of many moving parts we pull together.",
+      "note": "At scale"
+    },
+    {
+      "num": "One season",
+      "label": "To prove the saving on your own numbers before you commit to anything.",
+      "note": "How we start"
+    }
+  ],
+  "product": {
+    "eyebrow": "What we build",
+    "heading": "Connect the data first. Then put it to work for you.",
+    "cards": [
+      {
+        "tag": "The core",
+        "title": "One integration layer",
+        "body": "Labour, transport, yield, quality and cost, lifted out of their separate tools and into one place where the numbers line up. We add one integration at a time, starting with whatever is costing you most."
+      },
+      {
+        "tag": "Modern",
+        "title": "AI that does the boring bit",
+        "body": "The stitching, chasing and reconciling that eats your team's week, handled by agents running in the background. Your people spend their time on the judgement calls, not on data entry."
+      },
+      {
+        "tag": "Live now",
+        "title": "Picker transport & routing",
+        "body": "Our first project. Match the crews you have to the fields that are ready, and get them there without the daily scramble. Fewer empty seats, fewer idle pickers, and less fruit left too long on the cane. More projects follow."
+      }
+    ]
+  },
+  "approach": {
+    "eyebrow": "How we work",
+    "leadStart": "We build on a working farm, ",
+    "leadEmphasis": "not in a lab.",
+    "leadEnd": " Ripely is developed alongside one of the UK's largest berry growers.",
+    "points": [
+      {
+        "kicker": "Berry-first",
+        "title": "We know soft fruit",
+        "body": "Built around the way berries are grown, picked and moved, down to the punnet."
+      },
+      {
+        "kicker": "Built with growers",
+        "title": "Earns its place on the farm",
+        "body": "Everything we ship has to prove itself in a live operation before it reaches you."
+      },
+      {
+        "kicker": "Prove it first",
+        "title": "A season to earn trust",
+        "body": "We show the saving on your own numbers before you sign up to more."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Talk to us",
+    "heading": "Tell us where your season leaks.",
+    "sub": "Send a line about your operation and the tools you already run. We'll tell you what we'd connect first."
+  }
+}

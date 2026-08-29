@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import ContactForm from "@/components/ContactForm";
+import home from "@/content/home/index.json";
 
 const routePath =
   "M60 380 C 120 300, 360 320, 300 250 C 250 190, 150 210, 210 150 C 250 110, 320 130, 330 96";
@@ -14,23 +15,17 @@ export default function Home() {
         <section className="hero">
           <div className="wrap hero-grid">
             <div className="hero-copy">
-              <span className="eyebrow">Farm data, joined up</span>
+              <span className="eyebrow">{home.hero.eyebrow}</span>
               <h1>
-                The savings are hiding in the gaps{" "}
-                <span className="accent">between your systems.</span>
+                {home.hero.headline} <span className="accent">{home.hero.headlineAccent}</span>
               </h1>
-              <p className="hero-sub">
-                A big berry grower runs on a dozen tools that never speak to each other. Labour in
-                one, transport in another, yield and quality somewhere else again. Ripely joins that
-                data up and puts modern AI to work on it, so your team spends the day on the fruit
-                instead of the spreadsheets.
-              </p>
+              <p className="hero-sub">{home.hero.sub}</p>
               <div className="hero-cta">
                 <a className="btn btn-primary" href="#contact">
-                  Book a call
+                  {home.hero.ctaPrimary}
                 </a>
                 <a className="btn btn-ghost" href="#product">
-                  See what we build
+                  {home.hero.ctaSecondary}
                 </a>
               </div>
             </div>
@@ -95,36 +90,16 @@ export default function Home() {
         {/* STAT BAND */}
         <section className="band">
           <div className="wrap">
-            <span className="eyebrow">The problem</span>
-            <p className="band-lead">
-              You&apos;ve already paid for the software: a tool for picking, one for payroll, another
-              for haulage. None of them talk, so money leaks in the gaps between them, and someone
-              loses an evening stitching it together by hand.
-            </p>
+            <span className="eyebrow">{home.problem.eyebrow}</span>
+            <p className="band-lead">{home.problem.lead}</p>
             <div className="stats">
-              <div className="stat">
-                <div className="stat-num">~£1m/yr</div>
-                <div className="stat-label">
-                  What smarter picker transport alone saved one large grower. That is a single
-                  project, not the whole of it.
+              {home.stats.map((stat, i) => (
+                <div className="stat" key={i}>
+                  <div className="stat-num">{stat.num}</div>
+                  <div className="stat-label">{stat.label}</div>
+                  <div className="stat-note">{stat.note}</div>
                 </div>
-                <div className="stat-note">Estimate</div>
-              </div>
-              <div className="stat">
-                <div className="stat-num">1,500+</div>
-                <div className="stat-label">
-                  Seasonal workers to place in the right field each day at peak, one of many moving
-                  parts we pull together.
-                </div>
-                <div className="stat-note">At scale</div>
-              </div>
-              <div className="stat">
-                <div className="stat-num">One season</div>
-                <div className="stat-label">
-                  To prove the saving on your own numbers before you commit to anything.
-                </div>
-                <div className="stat-note">How we start</div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -132,36 +107,16 @@ export default function Home() {
         {/* PRODUCT */}
         <section className="paper" id="product">
           <div className="wrap">
-            <span className="eyebrow">What we build</span>
-            <h2>Connect the data first. Then put it to work for you.</h2>
+            <span className="eyebrow">{home.product.eyebrow}</span>
+            <h2>{home.product.heading}</h2>
             <div className="cards">
-              <div className="card">
-                <span className="card-tag">The core</span>
-                <h3>One integration layer</h3>
-                <p>
-                  Labour, transport, yield, quality and cost, lifted out of their separate tools and
-                  into one place where the numbers line up. We add one integration at a time,
-                  starting with whatever is costing you most.
-                </p>
-              </div>
-              <div className="card">
-                <span className="card-tag">Modern</span>
-                <h3>AI that does the boring bit</h3>
-                <p>
-                  The stitching, chasing and reconciling that eats your team&apos;s week, handled by
-                  agents running in the background. Your people spend their time on the judgement
-                  calls, not on data entry.
-                </p>
-              </div>
-              <div className="card">
-                <span className="card-tag">Live now</span>
-                <h3>Picker transport &amp; routing</h3>
-                <p>
-                  Our first project. Match the crews you have to the fields that are ready, and get
-                  them there without the daily scramble. Fewer empty seats, fewer idle pickers, and
-                  less fruit left too long on the cane. More projects follow.
-                </p>
-              </div>
+              {home.product.cards.map((card, i) => (
+                <div className="card" key={i}>
+                  <span className="card-tag">{card.tag}</span>
+                  <h3>{card.title}</h3>
+                  <p>{card.body}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -169,27 +124,20 @@ export default function Home() {
         {/* APPROACH */}
         <section className="approach" id="approach">
           <div className="wrap">
-            <span className="eyebrow">How we work</span>
+            <span className="eyebrow">{home.approach.eyebrow}</span>
             <p className="approach-lead">
-              We build on a working farm, <b>not in a lab.</b> Ripely is developed alongside one of
-              the UK&apos;s largest berry growers.
+              {home.approach.leadStart}
+              <b>{home.approach.leadEmphasis}</b>
+              {home.approach.leadEnd}
             </p>
             <div className="points">
-              <div className="point">
-                <div className="point-k">Berry-first</div>
-                <h4>We know soft fruit</h4>
-                <p>Built around the way berries are grown, picked and moved, down to the punnet.</p>
-              </div>
-              <div className="point">
-                <div className="point-k">Built with growers</div>
-                <h4>Earns its place on the farm</h4>
-                <p>Everything we ship has to prove itself in a live operation before it reaches you.</p>
-              </div>
-              <div className="point">
-                <div className="point-k">Prove it first</div>
-                <h4>A season to earn trust</h4>
-                <p>We show the saving on your own numbers before you sign up to more.</p>
-              </div>
+              {home.approach.points.map((point, i) => (
+                <div className="point" key={i}>
+                  <div className="point-k">{point.kicker}</div>
+                  <h4>{point.title}</h4>
+                  <p>{point.body}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -198,12 +146,9 @@ export default function Home() {
         <section className="contact" id="contact">
           <div className="wrap">
             <div className="contact-head">
-              <span className="eyebrow">Talk to us</span>
-              <h2>Tell us where your season leaks.</h2>
-              <p>
-                Send a line about your operation and the tools you already run. We&apos;ll tell you
-                what we&apos;d connect first.
-              </p>
+              <span className="eyebrow">{home.contact.eyebrow}</span>
+              <h2>{home.contact.heading}</h2>
+              <p>{home.contact.sub}</p>
             </div>
             <ContactForm />
             <p className="contact-fineprint">
