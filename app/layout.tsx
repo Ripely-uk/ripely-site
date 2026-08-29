@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const display = Bricolage_Grotesque({
@@ -35,6 +36,10 @@ export const metadata: Metadata = {
     locale: "en_GB",
     type: "website",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0E3A2B",
 };
 
 export default function RootLayout({
@@ -79,6 +84,7 @@ export default function RootLayout({
           </defs>
         </svg>
         {children}
+        <Analytics />
       </body>
     </html>
   );

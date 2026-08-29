@@ -29,7 +29,7 @@ export default function ContactForm() {
 
     if (!ACCESS_KEY) {
       setStatus("error");
-      setError("The form isn't configured yet. Please email us directly.");
+      setError("The form isn't set up yet. Please try again shortly.");
       return;
     }
 
@@ -55,7 +55,7 @@ export default function ContactForm() {
         form.reset();
       } else {
         setStatus("error");
-        setError("The message couldn't be sent. Please email us directly.");
+        setError("The message couldn't be sent. Please try again in a moment.");
       }
     } catch {
       setStatus("error");

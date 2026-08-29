@@ -206,6 +206,10 @@ export default function Home() {
               </p>
             </div>
             <ContactForm />
+            <p className="contact-fineprint">
+              Send us your details and we&apos;ll only ever use them to reply about your enquiry.
+              See our <a href="/privacy">privacy notice</a>.
+            </p>
           </div>
         </section>
       </main>
@@ -218,6 +222,11 @@ export default function Home() {
             </svg>
             <span className="foot-word">Ripely</span>
           </a>
+          <nav className="foot-links">
+            <a href="#product">Product</a>
+            <a href="#contact">Contact</a>
+            <a href="/privacy">Privacy</a>
+          </nav>
           <small>&copy; 2026 Ripely. Farm data integration for soft-fruit growers. Built in the UK.</small>
         </div>
       </footer>

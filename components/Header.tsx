@@ -15,18 +15,18 @@ export default function Header() {
   return (
     <header className={scrolled ? "scrolled" : ""}>
       <div className="wrap nav">
-        <a className="logo-lockup" href="#top" aria-label="Ripely home">
+        <a className="logo-lockup" href="/" aria-label="Ripely home">
           <svg className="mark mark--nav">
             <use href="#ripely-mark" />
           </svg>
           <span className="logo-word">Ripely</span>
         </a>
         <nav className="nav-links">
-          <a href="#product">Product</a>
-          <a href="#approach">Approach</a>
-          <a href="#contact">Contact</a>
+          <a href="/#product">Product</a>
+          <a href="/#approach">Approach</a>
+          <a href="/#contact">Contact</a>
         </nav>
-        <a className="btn btn-primary" href="#contact">
+        <a className="btn btn-primary" href="/#contact">
           Book a call
         </a>
       </div>
