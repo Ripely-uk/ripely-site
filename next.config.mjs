@@ -1,3 +1,8 @@
+import { fileURLToPath } from "node:url";
+import { dirname } from "node:path";
+
+const projectRoot = dirname(fileURLToPath(import.meta.url));
+
 /** @type {import('next').NextConfig} */
 const securityHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
@@ -8,6 +13,10 @@ const securityHeaders = [
 ];
 
 const nextConfig = {
+  // Pin the workspace root to this repo. A stray package-lock.json in a parent
+  // directory (~/package-lock.json, from an unrelated home-folder project) makes
+  // Next infer the wrong root and warn on every build; this silences it.
+  outputFileTracingRoot: projectRoot,
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },
