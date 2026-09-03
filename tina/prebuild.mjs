@@ -8,7 +8,12 @@ const hasCreds =
 
 if (hasCreds) {
   console.log("[tina] credentials found — building the /admin editor");
-  execSync("npx tinacms build", { stdio: "inherit" });
+  // --skip-cloud-checks: the Vercel build and Tina Cloud's re-indexing are both
+  // triggered by the same GitHub push, so a schema change (e.g. a new field) makes
+  // the local schema momentarily differ from the remote one. Without this flag that
+  // race fails the whole deploy with ERR_CLOUD_CHECK_FAILED even for non-breaking
+  // changes. Tina Cloud re-indexes from GitHub regardless, so skipping is safe.
+  execSync("npx tinacms build --skip-cloud-checks", { stdio: "inherit" });
 } else {
   console.log("[tina] no credentials — skipping /admin build (the site itself is unaffected)");
 }
