@@ -428,7 +428,7 @@ footer {
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
   .hero-grid { grid-template-columns: 1fr; gap: 36px; }
-  .hero-art { order: -1; max-width: 440px; }
+  .hero-art { max-width: 440px; }
   .stats, .cards, .points { grid-template-columns: 1fr; gap: 22px; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .nav-links { display: none; }
