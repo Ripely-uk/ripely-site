@@ -3,72 +3,69 @@
     "eyebrow": "Farm data, integrated",
     "headline": "The savings are hiding in the gaps",
     "headlineAccent": "between your systems.",
-    "sub": "A fruit grower runs on a dozen tools that never speak to each other. Labour in one, transport in another, yield and quality somewhere else again. Ripely joins that data up and puts modern AI to work on it, so your team spends the day on the fruit instead of the spreadsheets.",
+    "sub": "A produce operation runs on a dozen tools that never speak to each other. Labour sits in one, transport in another, yield and quality somewhere else again. We work out where that gap is costing you, then build the tool that closes it.",
     "ctaPrimary": "Book a call",
     "ctaSecondary": "See what we build"
   },
   "problem": {
     "eyebrow": "The problem",
-    "lead": "You've already paid for the software: a tool for picking, one for payroll, another for haulage. None of them talk, so money leaks in the gaps between them, and someone loses an evening stitching it together by hand."
+    "lead": "The information you run on is scattered across spreadsheets, systems, and a few things nobody documented. None of it connects, so nobody has the full picture without building it by hand."
   },
   "stats": [
     {
-      "num": "~£1m/yr",
-      "label": "What smarter picker transport alone saved one large grower. That is a single project, not the whole of it.",
-      "note": "Estimate"
+      "heading": "You keep the report",
+      "sub": "Whatever you decide to build, the findings are yours."
     },
     {
-      "num": "1,500+",
-      "label": "Seasonal workers to place in the right field each day at peak, one of many moving parts we pull together.",
-      "note": "At scale"
+      "heading": "We map before we build",
+      "sub": "We work out where your data actually lives before anyone writes code."
     },
     {
-      "num": "One season",
-      "label": "To prove the saving on your own numbers before you commit to anything.",
-      "note": "How we start"
+      "heading": "You see the cost first",
+      "sub": "No open-ended work. You know the shape of it before we start."
     }
   ],
   "product": {
-    "eyebrow": "What we build",
-    "heading": "Connect the data first. Then put it to work for you.",
+    "eyebrow": "How we work",
+    "heading": "We find the leak, then build the fix.",
     "cards": [
       {
-        "tag": "The core",
-        "title": "One integration layer",
-        "body": "Labour, transport, yield, quality and cost, lifted out of their separate tools and into one place where the numbers line up. We add one integration at a time, starting with whatever is costing you most."
+        "tag": "First",
+        "title": "We find where money leaks",
+        "body": "A short paid piece of work where we go through your operation with the people who run it, and map where the data lives, what the gaps cost, and what's worth fixing. You keep the findings whatever you decide next."
       },
       {
-        "tag": "Modern",
-        "title": "AI that does the boring bit",
-        "body": "The stitching, chasing and reconciling that eats your team's week, handled by agents running in the background. Your people spend their time on the judgement calls, not on data entry."
+        "tag": "Then",
+        "title": "We build what's worth building",
+        "body": "Where a tool will pay for itself, we build it. Fixed scope, fixed price, running in your operation."
       },
       {
-        "tag": "Live now",
-        "title": "Picker transport & routing",
-        "body": "Our first project. Match the crews you have to the fields that are ready, and get them there without the daily scramble. Fewer empty seats, fewer idle pickers, and less fruit left too long on the cane. More projects follow."
+        "tag": "Over time",
+        "title": "We fix the next thing",
+        "body": "Most operations have more than one leak. We work through them in order of what they cost, one at a time, so you're never waiting on a project that never lands."
       }
     ]
   },
   "approach": {
     "eyebrow": "How we work",
-    "leadStart": "We build on a working farm, ",
-    "leadEmphasis": "not in a lab.",
-    "leadEnd": " Ripely is developed alongside one of the UK's largest berry growers.",
+    "leadStart": "We fit around how you already work, then ",
+    "leadEmphasis": "fix what's slowing it down.",
+    "leadEnd": "",
     "points": [
       {
-        "kicker": "Berry-first",
-        "title": "We know soft fruit",
-        "body": "Built around the way berries are grown, picked and moved, down to the punnet."
+        "kicker": "We know the work",
+        "title": "We understand how produce operations run",
+        "body": "Our knowledge comes from inside the sector, from how growers, packers and suppliers actually move product day to day."
       },
       {
-        "kicker": "Built with growers",
-        "title": "Earns its place on the farm",
-        "body": "Everything we ship has to prove itself in a live operation before it reaches you."
+        "kicker": "Built to be used",
+        "title": "Made for the day-to-day, not the demo",
+        "body": "We build tools that hold up in a live operation, with real data and real pressure, because that's the only place they matter."
       },
       {
         "kicker": "Prove it first",
-        "title": "A season to earn trust",
-        "body": "We show the saving on your own numbers before you sign up to more."
+        "title": "We show the value before you commit",
+        "body": "We start with a short paid assessment, so you see what's worth building and what it's worth before any bigger decision."
       }
     ]
   },

@@ -57,11 +57,10 @@ export default defineConfig({
             name: "stats",
             label: "Stats",
             list: true,
-            ui: { itemProps: (item: { num?: string }) => ({ label: item?.num }) },
+            ui: { itemProps: (item: { heading?: string }) => ({ label: item?.heading }) },
             fields: [
-              { type: "string", name: "num", label: "Number" },
-              { type: "string", name: "label", label: "Label", ui: textarea },
-              { type: "string", name: "note", label: "Note" },
+              { type: "string", name: "heading", label: "Heading" },
+              { type: "string", name: "sub", label: "Sub", ui: textarea },
             ],
           },
           {

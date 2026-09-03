@@ -203,15 +203,6 @@ h1 .accent {
   color: var(--muted);
   max-width: 26ch;
 }
-.stat-note {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted-soft);
-  margin-top: 14px;
-}
-
 /* ---------- Product (paper) ---------- */
 .paper {
   background: var(--paper);

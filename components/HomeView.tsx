@@ -11,7 +11,7 @@ export interface HomeContent {
     ctaSecondary: string;
   };
   problem: { eyebrow: string; lead: string };
-  stats: { num: string; label: string; note: string }[];
+  stats: { heading: string; sub: string }[];
   product: {
     eyebrow: string;
     heading: string;
@@ -120,9 +120,8 @@ export default function HomeView({ home }: { home: HomeContent }) {
             <div className="stats">
               {home.stats.map((stat, i) => (
                 <div className="stat" key={i}>
-                  <div className="stat-num">{stat.num}</div>
-                  <div className="stat-label">{stat.label}</div>
-                  <div className="stat-note">{stat.note}</div>
+                  <div className="stat-num">{stat.heading}</div>
+                  <div className="stat-label">{stat.sub}</div>
                 </div>
               ))}
             </div>
