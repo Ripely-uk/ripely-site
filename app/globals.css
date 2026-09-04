@@ -53,7 +53,7 @@ a { color: inherit; text-decoration: none; }
 /* ---------- Logo lockup (brand vector artwork) ---------- */
 .logo-lockup { display: inline-flex; align-items: center; }
 .logo-img { display: block; width: auto; }
-.logo-img--nav  { height: 54px; }   /* stacked lockup — leaves above the word */
+.logo-img--nav  { height: 68px; }   /* stacked lockup — leaves above the word */
 .logo-img--foot { height: 30px; }   /* horizontal lockup — leaves beside the word */
 
 /* ---------- Nav ---------- */
@@ -71,11 +71,11 @@ header.scrolled { border-bottom-color: var(--forest-line); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 76px;
+  height: 96px;
 }
-.nav-links { display: flex; align-items: center; gap: 34px; }
+.nav-links { display: flex; align-items: center; gap: 38px; }
 .nav-links a {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--muted);
   transition: color 0.2s ease;
 }
@@ -106,7 +106,23 @@ header.scrolled { border-bottom-color: var(--forest-line); }
   border-color: var(--forest-line);
 }
 .btn-ghost:hover { border-color: var(--leaf-green); transform: translateY(-1px); }
-.nav .btn { font-size: 16px; padding: 12px 22px; }
+.nav .btn { font-size: 17px; padding: 13px 26px; }
+
+/* Mobile nav toggle + dropdown menu (revealed under 860px) */
+.nav-toggle { display: none; }
+.mobile-menu { display: none; }
+.nav-toggle-bars { position: relative; display: block; width: 22px; height: 15px; }
+.nav-toggle-bars span {
+  position: absolute; left: 0; width: 100%; height: 2px;
+  background: currentColor; border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.18s ease, top 0.25s ease;
+}
+.nav-toggle-bars span:nth-child(1) { top: 0; }
+.nav-toggle-bars span:nth-child(2) { top: 6.5px; }
+.nav-toggle-bars span:nth-child(3) { top: 13px; }
+header.menu-open .nav-toggle-bars span:nth-child(1) { top: 6.5px; transform: rotate(45deg); }
+header.menu-open .nav-toggle-bars span:nth-child(2) { opacity: 0; }
+header.menu-open .nav-toggle-bars span:nth-child(3) { top: 6.5px; transform: rotate(-45deg); }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -428,10 +444,73 @@ footer {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 36px; }
-  .hero-art { max-width: 440px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+  .hero-art { max-width: 340px; margin: 0 auto; }
   .stats, .cards, .points { grid-template-columns: 1fr; gap: 22px; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
+  .hero { padding: 56px 0 64px; }
+
+  /* Swap the desktop nav for the toggle + dropdown */
   .nav-links { display: none; }
-  .hero { padding: 60px 0 68px; }
+  .nav-cta { display: none; }
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-right: -10px;
+    background: transparent;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+  }
+  .nav-toggle:focus-visible {
+    outline: 2px solid var(--leaf-lime);
+    outline-offset: 2px;
+    border-radius: 8px;
+  }
+
+  .mobile-menu {
+    border-top: 1px solid var(--forest-line);
+    background: rgba(10, 42, 31, 0.98);
+    backdrop-filter: blur(10px);
+  }
+  header.menu-open .mobile-menu { display: block; }
+  .mobile-menu-inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 8px 28px 26px;
+  }
+  .mobile-menu-inner a:not(.btn) {
+    font-size: 18px;
+    color: var(--white);
+    padding: 15px 2px;
+    border-bottom: 1px solid rgba(28, 78, 59, 0.55);
+  }
+  .mobile-menu-inner .btn {
+    margin-top: 18px;
+    justify-content: center;
+    font-size: 16px;
+    padding: 15px 22px;
+  }
+
+  /* Stack the footer instead of squeezing it onto one wrapped row */
+  .foot { flex-direction: column; align-items: flex-start; gap: 18px; }
+}
+
+@media (max-width: 860px) and (prefers-reduced-motion: no-preference) {
+  header.menu-open .mobile-menu-inner > * {
+    animation: menuItemIn 0.26s ease both;
+  }
+  header.menu-open .mobile-menu-inner > *:nth-child(2) { animation-delay: 0.04s; }
+  header.menu-open .mobile-menu-inner > *:nth-child(3) { animation-delay: 0.08s; }
+  header.menu-open .mobile-menu-inner > *:nth-child(4) { animation-delay: 0.12s; }
+}
+@keyframes menuItemIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: none; }
 }
