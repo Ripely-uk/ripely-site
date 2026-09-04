@@ -53,7 +53,7 @@ export default function Header() {
         </nav>
 
         <a className="btn btn-primary nav-cta" href="/#contact">
-          Book a call
+          Talk to us
         </a>
 
         <button
@@ -80,7 +80,7 @@ export default function Header() {
             </a>
           ))}
           <a className="btn btn-primary" href="/#contact" onClick={close}>
-            Book a call
+            Talk to us
           </a>
         </nav>
       </div>

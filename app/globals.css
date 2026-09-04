@@ -164,14 +164,17 @@ h1 .accent {
   flex-wrap: wrap;
 }
 
-/* field-route signature */
-.field-art { width: 100%; height: auto; display: block; }
-.route-dot { fill: var(--leaf-lime); }
-.berry { fill: var(--leaf-green); }
+/* network graph signature */
+.network-art { width: 100%; height: auto; display: block; }
+.graph-edges line { opacity: 0.4; }
+.node-a { fill: var(--leaf-lime); }
+.node-b { fill: var(--leaf-green); }
+.node-c { fill: var(--leaf-mid); }
+.signal-dot { fill: var(--leaf-lime); }
 @media (prefers-reduced-motion: no-preference) {
-  .route-dot { animation: travel 7s ease-in-out infinite; }
-  .berry { animation: ripen 6s ease-in-out infinite; }
-  .berry:nth-child(odd) { animation-delay: 1.5s; }
+  .signal-dot { animation: travel 7s ease-in-out infinite; }
+  .node-pulse { animation: ripen 6s ease-in-out infinite; }
+  .node-pulse:nth-child(odd) { animation-delay: 1.5s; }
 }
 @keyframes travel {
   0%   { offset-distance: 0%; }
