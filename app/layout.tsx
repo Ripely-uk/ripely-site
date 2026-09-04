@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Bricolage_Grotesque, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
+import { Outfit, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
-const display = Bricolage_Grotesque({
+const display = Outfit({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
