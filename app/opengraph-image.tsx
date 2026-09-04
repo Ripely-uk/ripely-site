@@ -33,7 +33,7 @@ export default function Image() {
       >
         <div style={{ display: "flex", alignItems: "center", gap: "18px" }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img width="66" height="57" src={MARK_DATA_URI} alt="" />
+          <img width="66" height="59" src={MARK_DATA_URI} alt="" />
           <div style={{ fontSize: 44, fontWeight: 700, letterSpacing: "-0.02em" }}>Ripely</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
@@ -42,7 +42,7 @@ export default function Image() {
               display: "flex",
               fontSize: 22,
               letterSpacing: "0.2em",
-              color: "#A8CE3C",
+              color: "#A6C527",
               textTransform: "uppercase",
             }}
           >

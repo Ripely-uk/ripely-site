@@ -18,7 +18,7 @@ export default function AppleIcon() {
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img width="112" height="97" src={MARK_DATA_URI} alt="" />
+        <img width="112" height="100" src={MARK_DATA_URI} alt="" />
       </div>
     ),
     { ...size }

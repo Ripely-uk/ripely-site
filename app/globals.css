@@ -4,8 +4,9 @@
   --forest-line:   #1C4E3B;
   --paper:         #F5F7F0;
   --paper-ink:     #12291F;
-  --leaf-lime:     #A8CE3C;
-  --leaf-green:    #3FA24B;
+  --leaf-lime:     #A6C527;
+  --leaf-mid:      #74B02A;
+  --leaf-green:    #35A434;
   --white:         #FFFFFF;
   --muted:         #A9BFB2;
   --muted-soft:    #8FA89A;
@@ -41,27 +42,19 @@ a { color: inherit; text-decoration: none; }
 
 .eyebrow {
   font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.18em;
+  font-size: 13px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--leaf-lime);
   display: inline-block;
   margin-bottom: 22px;
 }
 
-/* ---------- Logo mark ---------- */
-.mark { display: block; object-fit: contain; }
-.mark--nav { width: 40px; height: 40px; }
-.mark--foot { width: 30px; height: 30px; }
-
-.logo-lockup { display: flex; align-items: center; gap: 12px; }
-.logo-word {
-  font-family: var(--display);
-  font-weight: 700;
-  font-size: 26px;
-  letter-spacing: -0.01em;
-  color: var(--white);
-}
+/* ---------- Logo lockup (brand vector artwork) ---------- */
+.logo-lockup { display: inline-flex; align-items: center; }
+.logo-img { display: block; width: auto; }
+.logo-img--nav  { height: 54px; }   /* stacked lockup — leaves above the word */
+.logo-img--foot { height: 30px; }   /* horizontal lockup — leaves beside the word */
 
 /* ---------- Nav ---------- */
 header {
@@ -78,7 +71,7 @@ header.scrolled { border-bottom-color: var(--forest-line); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 88px;
+  height: 76px;
 }
 .nav-links { display: flex; align-items: center; gap: 34px; }
 .nav-links a {
@@ -130,20 +123,21 @@ header.scrolled { border-bottom-color: var(--forest-line); }
 h1 {
   font-family: var(--display);
   font-weight: 700;
-  font-size: clamp(36px, 4.6vw, 56px);
-  line-height: 1.04;
+  font-size: clamp(38px, 4.6vw, 56px);
+  line-height: 1.05;
   letter-spacing: -0.02em;
   max-width: 15ch;
 }
 h1 .accent {
-  background: linear-gradient(100deg, var(--leaf-lime), var(--leaf-green));
+  background: linear-gradient(100deg, var(--leaf-lime), var(--leaf-mid) 55%, var(--leaf-green));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 .hero-sub {
-  margin-top: 26px;
-  font-size: 19px;
+  margin-top: 24px;
+  font-size: 18px;
+  line-height: 1.6;
   color: var(--muted);
   max-width: 46ch;
 }
@@ -174,15 +168,15 @@ h1 .accent {
 }
 
 /* ---------- Stat band ---------- */
-.band { padding: 74px 0; border-top: 1px solid var(--forest-line); }
+.band { padding: 88px 0; border-top: 1px solid var(--forest-line); }
 .band-lead {
   font-family: var(--display);
   font-weight: 500;
-  font-size: clamp(24px, 3vw, 34px);
-  line-height: 1.22;
+  font-size: clamp(22px, 2.6vw, 30px);
+  line-height: 1.28;
   letter-spacing: -0.01em;
-  max-width: 24ch;
-  margin-bottom: 52px;
+  max-width: 26ch;
+  margin-bottom: 48px;
 }
 .stats {
   display: grid;
@@ -192,16 +186,18 @@ h1 .accent {
 .stat { border-top: 2px solid var(--leaf-green); padding-top: 18px; }
 .stat-num {
   font-family: var(--display);
-  font-weight: 700;
-  font-size: clamp(30px, 4vw, 44px);
-  letter-spacing: -0.02em;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
   color: var(--white);
 }
 .stat-label {
-  margin-top: 10px;
-  font-size: 15px;
+  margin-top: 12px;
+  font-size: 16px;
+  line-height: 1.6;
   color: var(--muted);
-  max-width: 26ch;
+  max-width: 30ch;
 }
 /* ---------- Product (paper) ---------- */
 .paper {
@@ -214,6 +210,7 @@ h1 .accent {
   font-family: var(--display);
   font-weight: 700;
   font-size: clamp(28px, 3.6vw, 40px);
+  line-height: 1.1;
   letter-spacing: -0.02em;
   max-width: 18ch;
   margin-bottom: 44px;
@@ -235,22 +232,23 @@ h1 .accent {
 .card h3 {
   font-family: var(--display);
   font-weight: 600;
-  font-size: 21px;
+  font-size: 20px;
+  line-height: 1.3;
   letter-spacing: -0.01em;
-  margin: 12px 0 12px;
+  margin: 14px 0 12px;
 }
-.card p { font-size: 15.5px; color: #46584D; line-height: 1.5; }
+.card p { font-size: 16px; color: #46584D; line-height: 1.6; }
 
 /* ---------- Approach ---------- */
 .approach { padding: 88px 0; }
 .approach-lead {
   font-family: var(--display);
   font-weight: 500;
-  font-size: clamp(24px, 3vw, 34px);
-  line-height: 1.25;
+  font-size: clamp(22px, 2.6vw, 30px);
+  line-height: 1.3;
   letter-spacing: -0.01em;
-  max-width: 26ch;
-  margin-bottom: 54px;
+  max-width: 28ch;
+  margin-bottom: 52px;
 }
 .approach-lead b { color: var(--leaf-lime); font-weight: 500; }
 .points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
@@ -267,10 +265,11 @@ h1 .accent {
 .point h4 {
   font-family: var(--display);
   font-weight: 600;
-  font-size: 19px;
-  margin-bottom: 8px;
+  font-size: 20px;
+  line-height: 1.3;
+  margin-bottom: 10px;
 }
-.point p { font-size: 15px; color: var(--muted); }
+.point p { font-size: 16px; line-height: 1.6; color: var(--muted); }
 
 /* ---------- Contact ---------- */
 .contact {
@@ -281,14 +280,16 @@ h1 .accent {
 .contact h2 {
   font-family: var(--display);
   font-weight: 700;
-  font-size: clamp(32px, 4.6vw, 52px);
+  font-size: clamp(28px, 3.6vw, 40px);
+  line-height: 1.1;
   letter-spacing: -0.02em;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 .contact-head p {
-  font-size: 19px;
+  font-size: 18px;
+  line-height: 1.6;
   color: var(--muted);
-  max-width: 40ch;
+  max-width: 42ch;
   margin: 0 auto;
 }
 

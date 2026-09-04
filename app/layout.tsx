@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Bricolage_Grotesque, Geist, Geist_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
@@ -9,14 +9,15 @@ const display = Bricolage_Grotesque({
   display: "swap",
 });
 
-const body = Geist({
+const body = Hanken_Grotesk({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
 });
 
-const mono = Geist_Mono({
+const mono = IBM_Plex_Mono({
   subsets: ["latin"],
+  weight: ["400", "500"],
   variable: "--font-mono",
   display: "swap",
 });
@@ -47,8 +48,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-GB">
-      <body className={`${display.variable} ${body.variable} ${mono.variable}`}>
+    <html
+      lang="en-GB"
+      className={`${display.variable} ${body.variable} ${mono.variable}`}
+    >
+      <body>
         {children}
         <Analytics />
       </body>

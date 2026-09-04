@@ -98,8 +98,7 @@ export default function Privacy() {
       <footer>
         <div className="wrap foot">
           <Link className="logo-lockup" href="/" aria-label="Ripely home">
-            <img className="mark mark--foot" src="/ripely-mark.png" alt="" />
-            <span className="foot-word">Ripely</span>
+            <img className="logo-img logo-img--foot" src="/ripely-logo-horizontal.svg" alt="Ripely" />
           </Link>
           <small>&copy; 2026 Ripely. Farm data integration for soft-fruit growers. Built in the UK.</small>
         </div>

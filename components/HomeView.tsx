@@ -64,8 +64,8 @@ export default function HomeView({ home }: { home: HomeContent }) {
               >
                 <defs>
                   <linearGradient id="rowGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#3FA24B" stopOpacity="0.10" />
-                    <stop offset="100%" stopColor="#A8CE3C" stopOpacity="0.30" />
+                    <stop offset="0%" stopColor="#35A434" stopOpacity="0.10" />
+                    <stop offset="100%" stopColor="#A6C527" stopOpacity="0.30" />
                   </linearGradient>
                 </defs>
                 <g stroke="url(#rowGrad)" strokeWidth="2" fill="none">
@@ -89,7 +89,7 @@ export default function HomeView({ home }: { home: HomeContent }) {
                 <path
                   d={routePath}
                   fill="none"
-                  stroke="#A8CE3C"
+                  stroke="#A6C527"
                   strokeWidth="2.4"
                   strokeDasharray="4 7"
                   strokeLinecap="round"
@@ -186,8 +186,7 @@ export default function HomeView({ home }: { home: HomeContent }) {
       <footer>
         <div className="wrap foot">
           <a className="logo-lockup" href="#top" aria-label="Ripely home">
-            <img className="mark mark--foot" src="/ripely-mark.png" alt="" />
-            <span className="foot-word">Ripely</span>
+            <img className="logo-img logo-img--foot" src="/ripely-logo-horizontal.svg" alt="Ripely" />
           </a>
           <nav className="foot-links">
             <a href="#product">Product</a>
